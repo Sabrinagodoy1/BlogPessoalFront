@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap%27');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css%22");
+
+h1{
+  font-family: "Baloo Da 2", serif;
+}
+h5{
+  font-family: "Baloo Da 2", serif;
+  
+}
+.bg{
+  background-color: rgb(0, 11, 29);
+     
+}
+.margem{
+  margin-left: 25px;
+}
+
+.po{
+  min-height: 961px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+

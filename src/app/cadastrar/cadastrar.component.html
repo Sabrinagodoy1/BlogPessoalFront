@@ -1,0 +1,91 @@
+<div class="container-fluid body">
+
+  <div class="row d-flex align-items-center">
+
+    <div class="col-md-5" id="img-bg"></div>
+
+    <div class="col-md-7 mt-5 mb-5">
+
+      <div class="row d-flex justify-content-center">
+
+        <div class="col-md-10">
+
+          <h1 class="text-center text-white">Cadastro</h1>
+
+          <div class="form-group">
+            <label for="nome" class="text-white">Nome</label>
+            <input [(ngModel)]="user.nome" class="form-control" type="text" name="nome" id="nome"
+              placeholder="Seu nome">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="text-white">E-mail</label>
+            <input [(ngModel)]="user.usuario" class="form-control" type="email" name="email" id="email"
+              placeholder="Seu usuário">
+          </div>
+
+          <div class="form-group">
+            <label for="foto" class="text-white">Link da foto <a data-toggle="modal"
+              data-target="#novaPostagem"><img src="https://i.imgur.com/XwvAFUJ.png" alt="" width="30px"></a></label>
+            <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto"
+              placeholder="Link da sua foto">
+          </div>
+
+          <div class="form-group">
+            <label for="senha" class="text-white">Senha</label>
+            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
+              placeholder="Sua senha">
+          </div>
+
+          <div class="form-group">
+            <label for="confirmSenha" class="text-white">Confirmar senha</label>
+            <input [(ngModel)]="user.senha" class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+              placeholder="Confirme sua senha">
+          </div>
+
+          <div class="form-group">
+            <label for="confirmSenha" class="text-white">Tipo de usuário</label>
+            <select (change)="typeUser($event)" class="form-control" name="tipo" id="tipo">
+              <option>Selecione um tipo de usuário</option>
+              <option value="normal">Normal</option>
+              <option value="adm">Administrador</option>
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-center mt-5">
+            <button type="submit" class="btn corr cor mr-4 text-black" routerLink="/entrar">Cancelar</button>
+            <button (click)="cadastrar()" type="submit" class="btn corr core text-black">Cadastrar</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Link da foto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 class="letra">Para colocar uma imagem sua, você precisa escolher a imagem desejada e com o botão direito do seu mouse
+          clicar em copiar endereço da imagem e colar no campo Link da foto.<br>Caso você não queira ter esse trabalho você
+          pode utilizar nossa fotinho universal, copiar e colar o link dela que estará logo abaixo.</h6>
+          <h6 class="text-center mt-3 letra"> https://i.imgur.com/Tazy23k.png</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
